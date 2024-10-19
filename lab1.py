@@ -27,7 +27,7 @@ def file_read(file: str):
 
 def finding_mans(text: str) -> int:
     """
-    Finding the count of profiles with te pattern "Мужской"
+    Finding the count of profiles with the pattern "Мужской"
 
     :return: count of mens
     """
