@@ -4,7 +4,9 @@ import re
 
 def parsers() -> str:
     """
-    # :return:
+    Parse command arguments
+
+    :return: file
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('file', type=str, help='name of the file')
@@ -14,7 +16,9 @@ def parsers() -> str:
 
 def file_read(file: str):
     """
-    #:return:
+    Function for opening and reading files
+
+    :return: text
     """
     with open(file, "r", encoding="utf-8") as file:
         text = file.read()
@@ -23,7 +27,9 @@ def file_read(file: str):
 
 def finding_mans(text: str) -> int:
     """
-   # :return:
+    Finding the count of profiles with te pattern "Мужской"
+
+    :return: count of mens
     """
     pattern = r'Мужской'
     count = re.findall(pattern, text)
@@ -41,4 +47,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
